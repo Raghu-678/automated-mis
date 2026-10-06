@@ -51,8 +51,8 @@ Clone the repository and start any static file server:
 
 ```bash
 # Clone repository
-git clone https://github.com/Raghu-678/smart-mis-platform.git
-cd smart-mis-platform
+git clone https://github.com/Raghu-678/automated-mis.git
+cd automated-mis
 
 # Run with Python
 python -m http.server 3000
