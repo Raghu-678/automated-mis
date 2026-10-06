@@ -1,0 +1,1109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Targo Smart MIS — Automated Business Reporting & Analytics Platform</title>
+  <meta name="description" content="Targo Smart MIS: Automated Business Reporting Platform with Excel/CSV cleaning, SQL database, interactive dashboards, KPI tracking, AI summaries, and automated scheduled reports.">
+
+  <!-- Google Fonts: Quantico (400, 700) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quantico:ital,wght@0,400;0,700;1,400;1,700&family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Chart.js 4.5.1 -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.1/dist/chart.umd.min.js"></script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ========================================================================= -->
+  <!-- SECTION 1 — HERO (Exact Targo Specification)                              -->
+  <!-- ========================================================================= -->
+  <section id="hero" class="hero-section">
+    <!-- Background video -->
+    <video
+      id="hero-video"
+      class="hero-bg-video"
+      autoplay
+      muted
+      loop
+      playsinline
+      preload="auto"
+      aria-hidden="true"
+    >
+      <source src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260823_050407_500d0339-ab28-41c1-9688-132a74a3b5aa.mp4" type="video/mp4">
+    </video>
+
+    <!-- Desktop Scrim Overlay (Left 70%) -->
+    <div class="hero-scrim" aria-hidden="true"></div>
+
+    <!-- Top Navigation Bar -->
+    <header class="hero-navbar">
+      <!-- Logo: 38px dark circle with 20x8 white ellipse rotated -25° + "targo" -->
+      <a href="#hero" class="brand-logo" aria-label="Targo Home">
+        <div class="logo-mark">
+          <div class="logo-ellipse"></div>
+        </div>
+        <span class="logo-text">targo</span>
+        <span class="logo-badge">SMART MIS</span>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="nav-links" aria-label="Main Navigation">
+        <a href="#hero" class="nav-link active">HOME</a>
+        <a href="#about" class="nav-link">ABOUT</a>
+        <a href="#platform" class="nav-link open-platform-btn">DASHBOARD</a>
+        <a href="#kpi-section" class="nav-link open-kpi-btn">KPI ENGINE</a>
+        <a href="#reports-section" class="nav-link open-reports-btn">REPORTS</a>
+      </nav>
+
+      <!-- Desktop Right "Contact us" Chamfered Button -->
+      <button type="button" class="btn-contact-header" id="contact-header-btn" aria-label="Contact Us">
+        <svg class="mail-icon" width="17" height="13" viewBox="0 0 17 13" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="0.7" y="0.7" width="15.6" height="11.6" rx="1.3" stroke="currentColor" stroke-width="1.4"/>
+          <path d="M1.5 1.5L8.5 7.5L15.5 1.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span>CONTACT US</span>
+      </button>
+
+      <!-- Mobile Hamburger Button -->
+      <button type="button" class="mobile-hamburger-btn" id="mobile-hamburger-btn" aria-label="Toggle Navigation Menu" aria-expanded="false">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </header>
+
+    <!-- Mobile Stacked Menu Dropdown -->
+    <div class="mobile-nav-dropdown" id="mobile-nav-dropdown" aria-hidden="true">
+      <a href="#hero" class="mobile-nav-link">HOME</a>
+      <a href="#about" class="mobile-nav-link">ABOUT</a>
+      <a href="#platform" class="mobile-nav-link open-platform-btn">SMART MIS DASHBOARD</a>
+      <a href="#kpi-section" class="mobile-nav-link open-kpi-btn">KPI TRACKER</a>
+      <a href="#reports-section" class="mobile-nav-link open-reports-btn">AUTOMATED REPORTS</a>
+      <button type="button" class="mobile-contact-btn" id="mobile-contact-trigger">CONTACT US</button>
+    </div>
+
+    <!-- Hero Content: Staircase Headline & CTA -->
+    <div class="hero-content">
+      <h1 class="hero-headline">
+        <span class="headline-line line-1">SCALING</span>
+        <span class="headline-line line-2">THE</span>
+        <span class="headline-line line-3">PLATFORM</span>
+        <span class="headline-line line-4 indented">FOR</span>
+        <span class="headline-line line-5 indented">YOUR</span>
+        <span class="headline-line line-6 indented accent-cyan">BUSINESS</span>
+      </h1>
+
+      <div class="hero-cta-wrapper">
+        <button type="button" class="targo-cta-btn" id="hero-get-started-btn" aria-label="Get Started with Smart MIS">
+          <span class="cta-text">GET STARTED</span>
+          <span class="cta-trailing-line" aria-hidden="true"></span>
+        </button>
+        <span class="hero-subcaption">Automated Excel/CSV Pipeline • Power BI Dashboards • AI Summaries</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- SECTION 2 — ABOUT (Exact Targo Specification)                             -->
+  <!-- ========================================================================= -->
+  <section id="about" class="about-section">
+    <!-- Left Column -->
+    <div class="about-left-col">
+      <h2 class="about-headline">
+        <span class="about-line-1">ABOUT</span>
+        <span class="about-line-2 indented accent-cyan">BUSINESS</span>
+      </h2>
+
+      <p class="about-paragraph">
+        Targo builds the testing infrastructure modern teams rely on. From automated pipelines to full-scale QA audits, we make sure your software ships fast and breaks nothing. Hundreds of releases, zero surprises.
+      </p>
+
+      <div class="about-cta-wrapper">
+        <button type="button" class="targo-cta-btn" id="about-learn-more-btn" aria-label="Learn More About Smart MIS Platform">
+          <span class="cta-text">LEARN MORE</span>
+          <span class="cta-trailing-line" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Right Column: Video with #15BCDF Hue Blend Overlay -->
+    <div class="about-right-col">
+      <div class="about-video-container">
+        <video
+          id="about-video"
+          class="about-video"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="auto"
+          aria-hidden="true"
+        >
+          <source src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260823_063501_2e2c8971-de1e-473a-8611-a0c9ae7ee186.mp4" type="video/mp4">
+        </video>
+        <!-- Overlay rectangle covering video with #15BCDF and mix-blend-mode: hue -->
+        <div class="about-video-overlay" aria-hidden="true"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- SMART MIS PLATFORM INTERACTIVE EXPERIENCE (FULL MODAL / DASHBOARD SUITE) -->
+  <!-- ========================================================================= -->
+  <div id="platform-modal" class="platform-modal-overlay" role="dialog" aria-modal="true" aria-labelledby="platform-title" style="display: none;">
+    <div class="platform-container">
+      
+      <!-- Top App Bar with Role Switcher & Live Status -->
+      <div class="platform-topbar">
+        <div class="topbar-left">
+          <div class="platform-brand">
+            <div class="logo-mark small">
+              <div class="logo-ellipse"></div>
+            </div>
+            <div>
+              <h2 id="platform-title" class="platform-title">SMART MIS</h2>
+              <span class="platform-subtitle">AUTOMATED BUSINESS REPORTING ENGINE</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="topbar-center">
+          <!-- Live Alerts Bell Indicator -->
+          <button type="button" class="topbar-action-btn" id="toggle-alerts-btn" aria-label="View Alerts">
+            <i data-lucide="bell"></i>
+            <span class="alert-badge" id="alerts-count-badge">2</span>
+            <span>Alerts</span>
+          </button>
+
+          <!-- Quick AI Summary Trigger -->
+          <button type="button" class="topbar-action-btn pulse-glow" id="quick-ai-btn" aria-label="Generate AI Summary">
+            <i data-lucide="sparkles"></i>
+            <span>AI Executive Brief</span>
+          </button>
+        </div>
+
+        <div class="topbar-right">
+          <!-- Role Switcher -->
+          <div class="role-switcher-wrapper">
+            <span class="role-label"><i data-lucide="shield-check"></i> ROLE:</span>
+            <select id="user-role-select" class="role-select" aria-label="Select User Role">
+              <option value="Admin">Admin (Full Access)</option>
+              <option value="Manager" selected>Manager (Analytics & Reports)</option>
+              <option value="Viewer">Viewer (Read-only)</option>
+            </select>
+            <span class="role-tag" id="current-role-tag">MANAGER</span>
+          </div>
+
+          <!-- Close Platform Modal -->
+          <button type="button" class="btn-close-platform" id="btn-close-platform" aria-label="Close Smart MIS Platform">
+            <i data-lucide="x"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Main Platform Body with Navigation Tabs -->
+      <div class="platform-body">
+        
+        <!-- Platform Sidebar Nav -->
+        <aside class="platform-sidebar" aria-label="Platform Views">
+          <button type="button" class="tab-btn active" data-tab="tab-dashboard">
+            <i data-lucide="layout-dashboard"></i>
+            <span>Power BI Analytics</span>
+          </button>
+          <button type="button" class="tab-btn" data-tab="tab-upload">
+            <i data-lucide="file-spreadsheet"></i>
+            <span>Excel / CSV & Cleaning</span>
+            <span class="pill-new">AUTO-CLEAN</span>
+          </button>
+          <button type="button" class="tab-btn" data-tab="tab-kpis">
+            <i data-lucide="target"></i>
+            <span>KPI Tracker & Alerts</span>
+          </button>
+          <button type="button" class="tab-btn" data-tab="tab-ai">
+            <i data-lucide="bot"></i>
+            <span>AI Business Summary</span>
+          </button>
+          <button type="button" class="tab-btn" data-tab="tab-reports">
+            <i data-lucide="mail-check"></i>
+            <span>Scheduled Reports</span>
+          </button>
+          <button type="button" class="tab-btn" data-tab="tab-sql">
+            <i data-lucide="database"></i>
+            <span>SQL Explorer</span>
+          </button>
+
+          <div class="sidebar-status-card">
+            <div class="status-indicator online"></div>
+            <div class="status-details">
+              <span class="status-title">SQL Pipeline: Connected</span>
+              <span class="status-sub">PostgreSQL 16 • 12,480 Fact Rows</span>
+            </div>
+          </div>
+        </aside>
+
+        <!-- Platform Tab Content Area -->
+        <main class="platform-main">
+
+          <!-- =============================================================== -->
+          <!-- TAB 1: POWER BI / DASHBOARD-STYLE ANALYTICS                     -->
+          <!-- =============================================================== -->
+          <section id="tab-dashboard" class="platform-tab-pane active">
+            
+            <!-- Dashboard Controls & Date Filter -->
+            <div class="dashboard-header-bar">
+              <div>
+                <h3 class="pane-heading">Executive Revenue & Performance Dashboard</h3>
+                <p class="pane-subheading">Real-time consolidated analytics with multi-period revenue tracking and KPI threshold scoring.</p>
+              </div>
+
+              <div class="dashboard-filter-actions">
+                <!-- Data Source Selector -->
+                <div class="filter-group">
+                  <label for="dataset-quick-select" class="filter-label">DATASET:</label>
+                  <select id="dataset-quick-select" class="filter-select">
+                    <option value="ecommerce">E-Commerce & Retail Q1-Q2 (Cleaned)</option>
+                    <option value="saas">SaaS Enterprise MRR Fact</option>
+                    <option value="healthcare">Healthcare & Diagnostic Clinic Fact</option>
+                  </select>
+                </div>
+
+                <!-- Export Actions -->
+                <button type="button" class="btn-action-outline" id="btn-export-dashboard-csv">
+                  <i data-lucide="download"></i> Export CSV
+                </button>
+                <button type="button" class="btn-action-solid" id="btn-print-report">
+                  <i data-lucide="printer"></i> Print / PDF Deck
+                </button>
+              </div>
+            </div>
+
+            <!-- Top KPI Highlights Row -->
+            <div class="kpi-cards-grid">
+              <div class="kpi-metric-card">
+                <div class="kpi-card-header">
+                  <span class="kpi-title">Monthly Revenue</span>
+                  <span class="kpi-trend positive"><i data-lucide="trending-up"></i> +14.3%</span>
+                </div>
+                <div class="kpi-value" id="kpi-display-revenue">$48,000</div>
+                <div class="kpi-subtext">vs Target: <strong>$40,000</strong> (<span class="text-green">+20.0%</span>)</div>
+                <div class="kpi-progress-bar"><div class="progress-fill green" style="width: 120%;"></div></div>
+              </div>
+
+              <div class="kpi-metric-card">
+                <div class="kpi-card-header">
+                  <span class="kpi-title">Gross Margin %</span>
+                  <span class="kpi-trend positive"><i data-lucide="trending-up"></i> +2.1%</span>
+                </div>
+                <div class="kpi-value" id="kpi-display-margin">41.8%</div>
+                <div class="kpi-subtext">Target: <strong>38.0%</strong> (Safe Margin)</div>
+                <div class="kpi-progress-bar"><div class="progress-fill cyan" style="width: 110%;"></div></div>
+              </div>
+
+              <div class="kpi-metric-card">
+                <div class="kpi-card-header">
+                  <span class="kpi-title">Customer Acquisition Cost (CAC)</span>
+                  <span class="kpi-trend positive"><i data-lucide="trending-down"></i> -8.4%</span>
+                </div>
+                <div class="kpi-value" id="kpi-display-cac">$312</div>
+                <div class="kpi-subtext">Budget Limit: <strong>$350</strong> (Optimal)</div>
+                <div class="kpi-progress-bar"><div class="progress-fill green" style="width: 89%;"></div></div>
+              </div>
+
+              <div class="kpi-metric-card alert-state">
+                <div class="kpi-card-header">
+                  <span class="kpi-title">Return Rate %</span>
+                  <span class="kpi-trend negative"><i data-lucide="alert-triangle"></i> 4.8%</span>
+                </div>
+                <div class="kpi-value text-amber" id="kpi-display-return">4.8%</div>
+                <div class="kpi-subtext">Threshold Limit: <strong>4.0%</strong> (<span class="text-amber">ALERT</span>)</div>
+                <div class="kpi-progress-bar"><div class="progress-fill amber" style="width: 120%;"></div></div>
+              </div>
+            </div>
+
+            <!-- Uploaded Chart.js Components Grid (Both Dark & Light Visuals) -->
+            <div class="charts-gallery-grid">
+
+              <!-- CHART 1: Monthly Revenue (Dark Card with 6M/12M Toggle) -->
+              <div class="chart-card-dark">
+                <div class="chart-card-header">
+                  <div>
+                    <h4 class="chart-card-title-white">Monthly revenue</h4>
+                    <span class="chart-card-subtitle-gray">Interactive historical revenue timeline</span>
+                  </div>
+
+                  <div class="revenue-range-toggle" role="group" aria-label="Revenue Range">
+                    <button
+                      type="button"
+                      data-revenue-range="6m"
+                      aria-pressed="true"
+                      class="range-btn active"
+                    >
+                      6M
+                    </button>
+
+                    <button
+                      type="button"
+                      data-revenue-range="12m"
+                      aria-pressed="false"
+                      class="range-btn"
+                    >
+                      12M
+                    </button>
+                  </div>
+                </div>
+
+                <div class="chart-canvas-wrapper h-64">
+                  <canvas
+                    id="revenue-line-chart"
+                    role="img"
+                    aria-label="Monthly revenue, line chart"
+                  ></canvas>
+                </div>
+
+                <table id="revenue-line-chart-table" class="sr-only" aria-live="polite">
+                  <caption>Monthly revenue by month</caption>
+                  <thead>
+                    <tr><th scope="col">Month</th><th scope="col">Revenue</th></tr>
+                  </thead>
+                  <tbody></tbody>
+                </table>
+              </div>
+
+              <!-- CHART 2: Revenue vs target (Light Mode Card) -->
+              <div class="chart-card-light">
+                <div class="chart-card-header">
+                  <div>
+                    <h4 class="chart-card-title-dark">Revenue vs target (Light Theme)</h4>
+                    <span class="chart-card-subtitle-muted">Monthly revenue against quarterly target</span>
+                  </div>
+                  <span class="theme-badge light">Light Mode</span>
+                </div>
+
+                <div class="chart-canvas-wrapper h-64">
+                  <canvas
+                    id="revenue-target-combo-chart"
+                    role="img"
+                    aria-label="Revenue vs target, combo chart"
+                  ></canvas>
+                </div>
+
+                <table class="sr-only">
+                  <caption>Monthly revenue against quarterly target</caption>
+                  <thead>
+                    <tr><th scope="col">Month</th><th scope="col">Revenue</th><th scope="col">Target</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><th scope="row">Jan</th><td>$28,000</td><td>$32,000</td></tr>
+                    <tr><th scope="row">Feb</th><td>$34,000</td><td>$32,000</td></tr>
+                    <tr><th scope="row">Mar</th><td>$31,000</td><td>$32,000</td></tr>
+                    <tr><th scope="row">Apr</th><td>$39,000</td><td>$40,000</td></tr>
+                    <tr><th scope="row">May</th><td>$42,000</td><td>$40,000</td></tr>
+                    <tr><th scope="row">Jun</th><td>$48,000</td><td>$40,000</td></tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <!-- CHART 3: Revenue vs target (Dark Mode Card) -->
+              <div class="chart-card-dark">
+                <div class="chart-card-header">
+                  <div>
+                    <h4 class="chart-card-title-white">Revenue vs target (Dark Neon Theme)</h4>
+                    <span class="chart-card-subtitle-gray">Bar & dashed target line with dark contrast</span>
+                  </div>
+                  <span class="theme-badge dark">Dark Mode</span>
+                </div>
+
+                <div class="chart-canvas-wrapper h-64">
+                  <canvas
+                    id="revenue-target-combo-chart-dark"
+                    role="img"
+                    aria-label="Revenue vs target, dark combo chart"
+                  ></canvas>
+                </div>
+              </div>
+
+              <!-- CHART 4: Revenue: this year vs last year (Dark Mode Card) -->
+              <div class="chart-card-dark">
+                <div class="chart-card-header">
+                  <div>
+                    <h4 class="chart-card-title-white">Revenue: this year vs last year</h4>
+                    <span class="chart-card-subtitle-gray">YoY trajectory comparison ($k)</span>
+                  </div>
+                  <span class="badge-accent-cyan">YoY Growth +24.6%</span>
+                </div>
+
+                <div class="chart-canvas-wrapper h-64">
+                  <canvas
+                    id="yearly-revenue-comparison-line-chart"
+                    role="img"
+                    aria-label="Revenue this year vs last year, line chart"
+                  ></canvas>
+                </div>
+
+                <table class="sr-only">
+                  <caption>Monthly revenue, this year vs last year</caption>
+                  <thead>
+                    <tr><th scope="col">Month</th><th scope="col">This year</th><th scope="col">Last year</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><th scope="row">Jan</th><td>$28,000</td><td>$22,000</td></tr>
+                    <tr><th scope="row">Feb</th><td>$34,000</td><td>$25,000</td></tr>
+                    <tr><th scope="row">Mar</th><td>$31,000</td><td>$24,000</td></tr>
+                    <tr><th scope="row">Apr</th><td>$39,000</td><td>$29,000</td></tr>
+                    <tr><th scope="row">May</th><td>$42,000</td><td>$31,000</td></tr>
+                    <tr><th scope="row">Jun</th><td>$48,000</td><td>$35,000</td></tr>
+                  </tbody>
+                </table>
+              </div>
+
+            </div>
+
+            <!-- Regional & Category Breakdown Row -->
+            <div class="dashboard-secondary-grid">
+              <!-- Category Distribution -->
+              <div class="panel-card">
+                <div class="panel-card-header">
+                  <h4 class="panel-title">Product Category Contribution</h4>
+                  <span class="panel-tag">Live Fact Split</span>
+                </div>
+                <div class="chart-canvas-wrapper h-56">
+                  <canvas id="category-doughnut-chart"></canvas>
+                </div>
+              </div>
+
+              <!-- Regional Sales Performance -->
+              <div class="panel-card">
+                <div class="panel-card-header">
+                  <h4 class="panel-title">Regional Performance Breakdown</h4>
+                  <span class="panel-tag">North / West / South / East</span>
+                </div>
+                <div class="chart-canvas-wrapper h-56">
+                  <canvas id="regional-bar-chart"></canvas>
+                </div>
+              </div>
+            </div>
+
+          </section>
+
+          <!-- =============================================================== -->
+          <!-- TAB 2: EXCEL/CSV UPLOAD & AUTOMATIC DATA CLEANING ENGINE       -->
+          <!-- =============================================================== -->
+          <section id="tab-upload" class="platform-tab-pane">
+            <div class="pane-header-box">
+              <h3 class="pane-heading">📥 Excel / CSV Ingestion & 🧹 Automated Cleaning Pipeline</h3>
+              <p class="pane-subheading">Upload messy spreadsheets or load test benchmarks. Our Pandas-grade automated engine sanitizes headers, fixes mixed date formats, strips currency anomalies, trims whitespace, removes duplicates, and flags statistical outliers.</p>
+            </div>
+
+            <!-- Upload Area & Sample Dataset Loaders -->
+            <div class="upload-workbench-grid">
+              
+              <!-- Drag & Drop Box -->
+              <div class="drop-zone" id="file-drop-zone">
+                <input type="file" id="file-upload-input" accept=".csv, .xlsx, .xls" class="file-input-hidden">
+                <div class="drop-zone-content">
+                  <div class="upload-icon-circle">
+                    <i data-lucide="upload-cloud"></i>
+                  </div>
+                  <h4 class="drop-title">Drag & drop raw Excel or CSV here</h4>
+                  <p class="drop-subtitle">Supports .xlsx, .xls, .csv up to 25MB • Auto schema detection</p>
+                  
+                  <div class="drop-actions">
+                    <button type="button" class="btn-browse-file" id="btn-browse-file">
+                      <i data-lucide="folder-open"></i> Browse Files
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Quick Demo Samples Selector -->
+              <div class="sample-loader-card">
+                <h4 class="sample-title"><i data-lucide="database"></i> Or Load Pre-Packaged Raw Datasets</h4>
+                <p class="sample-desc">Test real-world messy data scenarios with unformatted dates, currency symbols, duplicate rows, and dirty categories:</p>
+
+                <div class="sample-buttons-list">
+                  <button type="button" class="btn-sample-dataset" data-sample="retail">
+                    <div class="sample-info">
+                      <strong>🏪 Multi-Store Retail Sales (Messy 1,200 rows)</strong>
+                      <span>Contains mixed dates (DD/MM vs MM/DD), ₹ symbols, 132 duplicates, trailing spaces</span>
+                    </div>
+                    <span class="btn-run-clean">Load & Clean</span>
+                  </button>
+
+                  <button type="button" class="btn-sample-dataset" data-sample="saas">
+                    <div class="sample-info">
+                      <strong>💻 SaaS MRR & Churn Fact (850 rows)</strong>
+                      <span>Missing invoice IDs, mixed currency USD/EUR, negative outlier values</span>
+                    </div>
+                    <span class="btn-run-clean">Load & Clean</span>
+                  </button>
+
+                  <button type="button" class="btn-sample-dataset" data-sample="clinic">
+                    <div class="sample-info">
+                      <strong>🏥 Healthcare Diagnostic Clinic Logs (620 rows)</strong>
+                      <span>Dirty department categories ("Cardio", "cardio "), unmapped patient IDs</span>
+                    </div>
+                    <span class="btn-run-clean">Load & Clean</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Cleaning Progress & Transformation Report Box (Appears after upload/cleaning) -->
+            <div id="cleaning-report-panel" class="cleaning-report-panel">
+              <div class="report-header">
+                <div class="report-title-group">
+                  <span class="badge-success"><i data-lucide="check-circle-2"></i> CLEANING ENGINE EXECUTED</span>
+                  <h4 class="report-dataset-name" id="cleaning-dataset-name">Multi_Store_Retail_Q2_Raw.xlsx</h4>
+                </div>
+                <div class="data-quality-score">
+                  <span class="score-label">DATA QUALITY SCORE</span>
+                  <span class="score-value">99.4%</span>
+                </div>
+              </div>
+
+              <!-- Metrics Summary Cards -->
+              <div class="cleaning-stats-grid">
+                <div class="stat-box">
+                  <span class="stat-num text-cyan" id="stat-total-rows">1,248</span>
+                  <span class="stat-lbl">Total Input Rows</span>
+                </div>
+                <div class="stat-box">
+                  <span class="stat-num text-green" id="stat-duplicates-removed">132</span>
+                  <span class="stat-lbl">Duplicates Removed</span>
+                </div>
+                <div class="stat-box">
+                  <span class="stat-num text-cyan" id="stat-dates-standardized">48</span>
+                  <span class="stat-lbl">Dates Standardized (ISO 8601)</span>
+                </div>
+                <div class="stat-box">
+                  <span class="stat-num text-amber" id="stat-outliers-flagged">12</span>
+                  <span class="stat-lbl">Outliers Flagged (IQR)</span>
+                </div>
+                <div class="stat-box">
+                  <span class="stat-num text-green" id="stat-schema-status">Passed</span>
+                  <span class="stat-lbl">SQL Schema Validation</span>
+                </div>
+              </div>
+
+              <!-- Automated Rules Transformation Checklist -->
+              <div class="transformation-rules-card">
+                <h5 class="rules-title"><i data-lucide="cpu"></i> Applied Automated Pandas Transformations:</h5>
+                <div class="rules-chips">
+                  <span class="rule-chip"><i data-lucide="check"></i> <code>trim_whitespace()</code> sanitized</span>
+                  <span class="rule-chip"><i data-lucide="check"></i> <code>snake_case</code> column headers mapped</span>
+                  <span class="rule-chip"><i data-lucide="check"></i> Currency symbols ($, ₹, commas) parsed to float</span>
+                  <span class="rule-chip"><i data-lucide="check"></i> Mixed date parsing <code>DD/MM/YYYY</code> → <code>YYYY-MM-DD</code></span>
+                  <span class="rule-chip"><i data-lucide="check"></i> Category normalization ("mumbai " → "Mumbai")</span>
+                  <span class="rule-chip"><i data-lucide="check"></i> Multi-tenant <code>organization_id</code> partition assigned</span>
+                </div>
+              </div>
+
+              <!-- Cleaned Data Preview Table -->
+              <div class="table-preview-container">
+                <div class="table-preview-header">
+                  <h5 class="table-title">Cleaned Data Preview (Showing Top 10 of 1,116 SQL Rows)</h5>
+                  <button type="button" class="btn-sm-sync" id="btn-sync-to-sql">
+                    <i data-lucide="database"></i> Sync Directly into SQL fact table
+                  </button>
+                </div>
+                <div class="table-responsive">
+                  <table class="data-preview-table" id="cleaned-preview-table">
+                    <thead>
+                      <tr>
+                        <th>row_id</th>
+                        <th>invoice_date</th>
+                        <th>product_name</th>
+                        <th>category</th>
+                        <th>region</th>
+                        <th>quantity</th>
+                        <th>unit_price</th>
+                        <th>total_amount</th>
+                        <th>cleaning_flag</th>
+                      </tr>
+                    </thead>
+                    <tbody id="cleaned-preview-tbody">
+                      <!-- Filled by JavaScript -->
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+          </section>
+
+          <!-- =============================================================== -->
+          <!-- TAB 3: KPI TRACKER & AUTOMATED ALERTS                           -->
+          <!-- =============================================================== -->
+          <section id="tab-kpis" class="platform-tab-pane">
+            <div class="pane-header-box">
+              <h3 class="pane-heading">🎯 KPI Tracking & Automated Alert Engine</h3>
+              <p class="pane-subheading">Define business metrics, set target thresholds, and receive real-time warnings when performance diverges.</p>
+            </div>
+
+            <!-- KPI Definition Table & Threshold Configuration -->
+            <div class="kpi-manager-layout">
+              
+              <!-- Left: Live KPI Matrix -->
+              <div class="kpi-matrix-card">
+                <div class="matrix-header">
+                  <h4 class="matrix-title">Monitored Business KPIs</h4>
+                  <button type="button" class="btn-action-outline btn-sm" id="btn-add-kpi-modal">
+                    <i data-lucide="plus"></i> Define New KPI
+                  </button>
+                </div>
+
+                <div class="kpi-table-responsive">
+                  <table class="kpi-status-table">
+                    <thead>
+                      <tr>
+                        <th>Metric Name</th>
+                        <th>Target</th>
+                        <th>Actual</th>
+                        <th>Variance</th>
+                        <th>Warning Thresh</th>
+                        <th>Critical Thresh</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                      </tr>
+                    </thead>
+                    <tbody id="kpi-definitions-tbody">
+                      <!-- Populated via JS -->
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <!-- Right: Active Alerts & Trigger Simulator -->
+              <div class="alerts-sidebar-card">
+                <div class="alerts-header">
+                  <div class="alerts-title-wrap">
+                    <h4 class="alerts-title"><i data-lucide="bell-ring"></i> Active Alerts</h4>
+                    <span class="badge-alert-count" id="active-alert-pill">2 Active</span>
+                  </div>
+                  <button type="button" class="btn-test-alert" id="btn-simulate-alert">
+                    <i data-lucide="zap"></i> Simulate Anomaly
+                  </button>
+                </div>
+
+                <div class="alerts-stream-list" id="alerts-stream-container">
+                  <!-- Populated via JS -->
+                </div>
+              </div>
+
+            </div>
+          </section>
+
+          <!-- =============================================================== -->
+          <!-- TAB 4: AI BUSINESS SUMMARY GENERATOR                            -->
+          <!-- =============================================================== -->
+          <section id="tab-ai" class="platform-tab-pane">
+            <div class="pane-header-box">
+              <div class="flex-between">
+                <div>
+                  <h3 class="pane-heading">🤖 AI-Generated Business Intelligence Summary</h3>
+                  <p class="pane-subheading">Plain-English executive insights synthesized directly from your verified SQL fact tables and KPI data.</p>
+                </div>
+                <button type="button" class="targo-cta-btn btn-sm" id="btn-generate-ai-summary">
+                  <i data-lucide="sparkles"></i>
+                  <span class="cta-text">RE-SYNTHESIZE BRIEF</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- AI Summary Executive Board Card -->
+            <div class="ai-summary-board">
+              <div class="ai-board-header">
+                <div class="ai-badge-group">
+                  <span class="ai-provider-badge"><i data-lucide="bot"></i> Claude / Gemini Executive Synthesizer</span>
+                  <span class="ai-timestamp" id="ai-timestamp-display">Generated for Period: June 2026</span>
+                </div>
+                <div class="ai-actions">
+                  <button type="button" class="btn-icon-copy" id="btn-copy-ai-summary" title="Copy to clipboard">
+                    <i data-lucide="copy"></i> Copy Brief
+                  </button>
+                </div>
+              </div>
+
+              <div class="ai-summary-content" id="ai-summary-text-box">
+                <!-- AI Streamed Content -->
+                <div class="ai-insight-block">
+                  <h4 class="ai-section-title">📊 Executive Highlights & Revenue Momentum</h4>
+                  <ul class="ai-bullet-list">
+                    <li><strong>Revenue Outperformance:</strong> June monthly revenue reached <strong>$48,000</strong>, exceeding the quarterly target of $40,000 by <strong>+20.0%</strong> and expanding <strong>+14.3% MoM</strong>.</li>
+                    <li><strong>YoY Trajectory:</strong> Trailing 6-month revenue achieved <strong>$222,000</strong> compared to $166,000 in the previous year—a <strong>+33.7% YoY surge</strong> driven by North & West zone expansions.</li>
+                    <li><strong>Gross Margin Health:</strong> Sustained robust gross margin at <strong>41.8%</strong>, +3.8% above the baseline safety threshold of 38.0%.</li>
+                  </ul>
+                </div>
+
+                <div class="ai-insight-block warning-border">
+                  <h4 class="ai-section-title text-amber">⚠️ Operational Bottlenecks & Anomaly Alerts</h4>
+                  <ul class="ai-bullet-list">
+                    <li><strong>Return Rate Surge:</strong> Product return rate climbed to <strong>4.8%</strong>, breaching the defined target ceiling of 4.0%. Chief driver: "Enterprise Pro Suite" packaging defect in the East zone.</li>
+                    <li><strong>Cash Collection Cycle:</strong> Days Sales Outstanding (DSO) increased from 28 to 34 days, indicating delayed reconciliations for distributor accounts.</li>
+                  </ul>
+                </div>
+
+                <div class="ai-insight-block action-border">
+                  <h4 class="ai-section-title text-cyan">🎯 Recommended Strategic Actions</h4>
+                  <ol class="ai-numbered-list">
+                    <li><strong>Authorize Warehouse QA Audit:</strong> Inspect Batch #8841 for packaging tolerance in the East distribution hub to halt return rate escalation.</li>
+                    <li><strong>Double Down on Top Performing SKUs:</strong> Reallocate 15% promotional budget towards Electronics & Cloud hardware lines exhibiting 54% margin.</li>
+                    <li><strong>Implement Auto-Payment Reminders:</strong> Schedule automated WhatsApp / Email dunning triggers 3 days before net-30 invoice maturity.</li>
+                  </ol>
+                </div>
+              </div>
+
+              <!-- Interactive "Ask Your Data" Query Box -->
+              <div class="ask-data-box">
+                <label for="ai-nlq-input" class="ask-title"><i data-lucide="message-square"></i> Ask Your Business Data (Natural Language to SQL)</label>
+                <div class="ask-input-group">
+                  <input type="text" id="ai-nlq-input" class="ask-input" placeholder="e.g. Which region had the highest margin drop last month? or Show top 3 products by revenue">
+                  <button type="button" class="btn-ask-submit" id="btn-ask-submit">Ask AI</button>
+                </div>
+                <div id="ai-nlq-response" class="ask-response-box" style="display: none;">
+                  <!-- Dynamic response -->
+                </div>
+              </div>
+            </div>
+
+          </section>
+
+          <!-- =============================================================== -->
+          <!-- TAB 5: AUTOMATED REPORTS & SCHEDULING                          -->
+          <!-- =============================================================== -->
+          <section id="tab-reports" class="platform-tab-pane">
+            <div class="pane-header-box">
+              <h3 class="pane-heading">📅 Automated Reporting & Scheduled Distribution</h3>
+              <p class="pane-subheading">Generate clean executive PDF/HTML digests sent automatically on daily, weekly, or monthly schedules via SMTP/Email.</p>
+            </div>
+
+            <div class="reports-workbench-grid">
+              
+              <!-- Report Templates List -->
+              <div class="report-templates-panel">
+                <h4 class="panel-section-title">Configured Automated Reports (APScheduler Active)</h4>
+
+                <div class="report-schedule-cards">
+                  
+                  <!-- Template 1 -->
+                  <div class="schedule-card active">
+                    <div class="schedule-card-header">
+                      <div>
+                        <span class="report-frequency-badge daily">DAILY SNAPSHOT</span>
+                        <h5 class="report-card-name">Morning Revenue & Flash Sales Digest</h5>
+                      </div>
+                      <label class="switch">
+                        <input type="checkbox" checked aria-label="Toggle Daily Report">
+                        <span class="slider round"></span>
+                      </label>
+                    </div>
+                    <p class="report-card-desc">Sends daily sales total, target variance, and urgent KPI alerts at 08:30 AM IST.</p>
+                    <div class="report-meta">
+                      <span><i data-lucide="clock"></i> Cron: <code>30 8 * * *</code> (IST)</span>
+                      <span><i data-lucide="users"></i> 4 Recipients (Leadership, Finance)</span>
+                    </div>
+                    <div class="report-btn-group">
+                      <button type="button" class="btn-report-preview" data-report-type="daily">
+                        <i data-lucide="eye"></i> Preview Email
+                      </button>
+                      <button type="button" class="btn-report-send" data-report-type="daily">
+                        <i data-lucide="send"></i> Send Now
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- Template 2 -->
+                  <div class="schedule-card active">
+                    <div class="schedule-card-header">
+                      <div>
+                        <span class="report-frequency-badge weekly">WEEKLY EXECUTIVE</span>
+                        <h5 class="report-card-name">Comprehensive Weekly Performance & AI Summary</h5>
+                      </div>
+                      <label class="switch">
+                        <input type="checkbox" checked aria-label="Toggle Weekly Report">
+                        <span class="slider round"></span>
+                      </label>
+                    </div>
+                    <p class="report-card-desc">Power BI chart snapshots, category margins, and AI executive action bullets every Monday at 09:00 AM.</p>
+                    <div class="report-meta">
+                      <span><i data-lucide="clock"></i> Cron: <code>0 9 * * 1</code> (IST)</span>
+                      <span><i data-lucide="users"></i> 8 Recipients (Exec Team, Regional Heads)</span>
+                    </div>
+                    <div class="report-btn-group">
+                      <button type="button" class="btn-report-preview" data-report-type="weekly">
+                        <i data-lucide="eye"></i> Preview Email
+                      </button>
+                      <button type="button" class="btn-report-send" data-report-type="weekly">
+                        <i data-lucide="send"></i> Send Now
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- Template 3 -->
+                  <div class="schedule-card active">
+                    <div class="schedule-card-header">
+                      <div>
+                        <span class="report-frequency-badge monthly">MONTHLY BOARD</span>
+                        <h5 class="report-card-name">Monthly Board Review & YoY Financial Audit</h5>
+                      </div>
+                      <label class="switch">
+                        <input type="checkbox" checked aria-label="Toggle Monthly Report">
+                        <span class="slider round"></span>
+                      </label>
+                    </div>
+                    <p class="report-card-desc">Detailed 12-month revenue trend, target variances, and printable board-ready PDF attachment.</p>
+                    <div class="report-meta">
+                      <span><i data-lucide="clock"></i> Cron: <code>0 10 1 * *</code> (IST)</span>
+                      <span><i data-lucide="users"></i> 12 Board Members & Investors</span>
+                    </div>
+                    <div class="report-btn-group">
+                      <button type="button" class="btn-report-preview" data-report-type="monthly">
+                        <i data-lucide="eye"></i> Preview Email
+                      </button>
+                      <button type="button" class="btn-report-send" data-report-type="monthly">
+                        <i data-lucide="send"></i> Send Now
+                      </button>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+              <!-- Interactive Email & PDF Preview Canvas -->
+              <div class="report-preview-panel">
+                <div class="preview-panel-header">
+                  <h4 class="panel-section-title"><i data-lucide="mail"></i> Live HTML Email Report Preview</h4>
+                  <button type="button" class="btn-action-outline btn-sm" id="btn-download-pdf-preview">
+                    <i data-lucide="file-down"></i> Export PDF
+                  </button>
+                </div>
+
+                <div class="email-mockup-frame" id="email-mockup-container">
+                  <!-- Injected by JavaScript based on active template -->
+                </div>
+              </div>
+
+            </div>
+          </section>
+
+          <!-- =============================================================== -->
+          <!-- TAB 6: SQL DATABASE SCHEMA & QUERY EXPLORER                     -->
+          <!-- =============================================================== -->
+          <section id="tab-sql" class="platform-tab-pane">
+            <div class="pane-header-box">
+              <h3 class="pane-heading">🗄️ SQL Schema & Multi-Tenant Database Explorer</h3>
+              <p class="pane-subheading">Clean, normalized PostgreSQL schema with multi-tenant <code>organization_id</code> isolation, partitioned fact tables, and optimized view indices.</p>
+            </div>
+
+            <div class="sql-explorer-grid">
+              
+              <!-- Left: Schema Tree -->
+              <div class="sql-schema-tree">
+                <h4 class="tree-title"><i data-lucide="layers"></i> Database Tables & Views</h4>
+                <div class="schema-list">
+                  <div class="schema-item active" data-table="sales_fact">
+                    <div class="schema-item-header">
+                      <i data-lucide="table"></i>
+                      <span>public.sales_fact</span>
+                      <span class="row-count-badge">12,480 rows</span>
+                    </div>
+                    <div class="schema-columns">
+                      <code>id: uuid (PK)</code>
+                      <code>organization_id: uuid (FK, indexed)</code>
+                      <code>invoice_date: date (indexed)</code>
+                      <code>product_id: varchar(50)</code>
+                      <code>category: varchar(100)</code>
+                      <code>region: varchar(50)</code>
+                      <code>quantity: integer</code>
+                      <code>amount: numeric(12,2)</code>
+                      <code>gross_margin: numeric(6,4)</code>
+                    </div>
+                  </div>
+
+                  <div class="schema-item" data-table="kpi_definitions">
+                    <div class="schema-item-header">
+                      <i data-lucide="table"></i>
+                      <span>public.kpi_definitions</span>
+                      <span class="row-count-badge">18 rows</span>
+                    </div>
+                    <div class="schema-columns">
+                      <code>id: uuid (PK)</code>
+                      <code>metric_name: varchar(100)</code>
+                      <code>target_val: numeric</code>
+                      <code>warning_threshold: numeric</code>
+                      <code>critical_threshold: numeric</code>
+                    </div>
+                  </div>
+
+                  <div class="schema-item" data-table="alerts">
+                    <div class="schema-item-header">
+                      <i data-lucide="table"></i>
+                      <span>public.alerts</span>
+                      <span class="row-count-badge">42 rows</span>
+                    </div>
+                    <div class="schema-columns">
+                      <code>id: uuid (PK)</code>
+                      <code>kpi_id: uuid (FK)</code>
+                      <code>severity: varchar(20)</code>
+                      <code>message: text</code>
+                      <code>status: varchar(20)</code>
+                      <code>created_at: timestamptz</code>
+                    </div>
+                  </div>
+
+                  <div class="schema-item" data-table="reports">
+                    <div class="schema-item-header">
+                      <i data-lucide="table"></i>
+                      <span>public.reports</span>
+                      <span class="row-count-badge">6 rows</span>
+                    </div>
+                    <div class="schema-columns">
+                      <code>id: uuid (PK)</code>
+                      <code>type: varchar(50)</code>
+                      <code>frequency: varchar(20)</code>
+                      <code>recipients: jsonb</code>
+                      <code>last_run: timestamptz</code>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Right: Query Sandbox & Live Execution -->
+              <div class="sql-query-sandbox">
+                <div class="sandbox-header">
+                  <h4 class="sandbox-title"><i data-lucide="terminal"></i> SQL Query Sandbox</h4>
+                  <div class="sample-queries-dropdown">
+                    <label for="sample-sql-select" class="sr-only">Prebuilt Query</label>
+                    <select id="sample-sql-select" class="filter-select">
+                      <option value="monthly_rev">Prebuilt: Monthly Revenue Aggregate</option>
+                      <option value="category_margin">Prebuilt: Category Gross Margin & Units</option>
+                      <option value="regional_variance">Prebuilt: Regional Target Variance</option>
+                      <option value="active_alerts">Prebuilt: Unresolved Critical Alerts</option>
+                    </select>
+                  </div>
+                </div>
+
+                <!-- Code Editor Box -->
+                <div class="sql-editor-container">
+                  <textarea id="sql-query-input" class="sql-textarea" spellcheck="false">SELECT 
+    TO_CHAR(invoice_date, 'Mon YYYY') AS month_label,
+    COUNT(id) AS total_orders,
+    SUM(quantity) AS total_units_sold,
+    ROUND(SUM(amount), 2) AS monthly_revenue,
+    ROUND(AVG(gross_margin) * 100, 2) AS avg_margin_pct
+FROM public.sales_fact
+WHERE organization_id = 'org_enterprise_01'
+GROUP BY 1, DATE_TRUNC('month', invoice_date)
+ORDER BY DATE_TRUNC('month', invoice_date) DESC
+LIMIT 12;</textarea>
+                  <div class="editor-actions">
+                    <button type="button" class="btn-run-sql" id="btn-run-sql">
+                      <i data-lucide="play"></i> Execute SQL Query
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Query Result Table -->
+                <div class="sql-results-container">
+                  <div class="results-meta">
+                    <span class="status-tag-green">Query Executed in 14ms</span>
+                    <span class="meta-rows" id="sql-rows-count">6 rows returned</span>
+                  </div>
+                  <div class="table-responsive">
+                    <table class="sql-results-table" id="sql-results-table">
+                      <thead>
+                        <tr>
+                          <th>month_label</th>
+                          <th>total_orders</th>
+                          <th>total_units_sold</th>
+                          <th>monthly_revenue</th>
+                          <th>avg_margin_pct</th>
+                        </tr>
+                      </thead>
+                      <tbody id="sql-results-tbody">
+                        <!-- Populated by JS -->
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </section>
+
+        </main>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- CONTACT US MODAL                                                          -->
+  <!-- ========================================================================= -->
+  <div id="contact-modal" class="contact-modal-overlay" role="dialog" aria-modal="true" aria-labelledby="contact-modal-title" style="display: none;">
+    <div class="contact-modal-card">
+      <div class="contact-modal-header">
+        <div>
+          <h3 id="contact-modal-title" class="contact-title">CONNECT WITH TARGO</h3>
+          <p class="contact-subtitle">Scale your automated business reporting infrastructure with Smart MIS.</p>
+        </div>
+        <button type="button" class="btn-close-contact" id="btn-close-contact" aria-label="Close Contact Dialog">
+          <i data-lucide="x"></i>
+        </button>
+      </div>
+
+      <form id="contact-form" class="contact-form">
+        <div class="form-group">
+          <label for="contact-name">FULL NAME</label>
+          <input type="text" id="contact-name" class="targo-input" placeholder="e.g. Alex Henderson" required>
+        </div>
+
+        <div class="form-group">
+          <label for="contact-email">BUSINESS EMAIL</label>
+          <input type="email" id="contact-email" class="targo-input" placeholder="alex@company.com" required>
+        </div>
+
+        <div class="form-group">
+          <label for="contact-team-size">ORGANIZATION TYPE</label>
+          <select id="contact-team-size" class="targo-input">
+            <option value="retail">Retail & Multi-store Distribution</option>
+            <option value="saas">SaaS / Technology Company</option>
+            <option value="healthcare">Healthcare & Diagnostics</option>
+            <option value="agency">Consulting / Financial MIS</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="contact-message">YOUR REPORTING BOTTLENECK</label>
+          <textarea id="contact-message" class="targo-input" rows="3" placeholder="Tell us how many hours your team currently spends cleaning spreadsheets..."></textarea>
+        </div>
+
+        <button type="submit" class="targo-cta-btn full-width">
+          <span class="cta-text">REQUEST SYSTEM DEMO</span>
+          <span class="cta-trailing-line" aria-hidden="true"></span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container" class="toast-container" aria-live="polite"></div>
+
+  <!-- Scripts -->
+  <script src="sample-data.js"></script>
+  <script src="app.js"></script>
+  <script>
+    // Initialize Lucide icons on load
+    if (window.lucide) {
+      lucide.createIcons();
+    }
+  </script>
+</body>
+</html>
